@@ -1,0 +1,116 @@
+{
+	"easycom": {
+		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home-index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#f8f8f8"
+			}
+		}, {
+			"path": "pages/course/course-index",
+			"style": {
+				"navigationBarTitleText": "课程"
+			}
+		}, {
+			"path": "pages/community/community-index",
+			"style": {
+				"navigationBarTitleText": "社区"
+			}
+		}, {
+			"path": "pages/my/my-index",
+			"style": {
+				"navigationBarTitleText": "智慧AI",
+				"enablePullDownRefresh": false,
+
+			}
+		}, {
+			"path": "pages/community/community-detail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}, {
+			"path": "pages/detail/img-detail",
+			"style": {
+				"navigationBarTitleText": "作品详情",
+
+			}
+		}, {
+			"path": "pages/publish/publish-index",
+			"style": {
+				"navigationBarTitleText": "发布"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录页"
+			}
+		},
+		{
+			"path": "pages/course/course-detail",
+			"style": {
+				"navigationBarTitleText": "课程中心"
+			}
+		},
+		{
+			"path": "pages/community/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+
+
+
+
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "默认页"
+			}
+		},
+
+
+	],
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#fff",
+		"borderStyle": "white",
+		"backgroundColor": "transparent",
+		"position": "bottom",
+		"list": [{
+				"pagePath": "pages/home/home-index",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/community/community-index",
+				"text": "社区"
+			},
+			// {
+			// 	"pagePath": "pages/publish/publish-index",
+			// 	"text": "发布"
+			// }, 
+			{
+				"pagePath": "pages/course/course-index",
+				// "iconPath": "static/index.png",
+				// "selectedIconPath": "static/index-selected.png",
+				"text": "课程"
+			}, {
+				"pagePath": "pages/my/my-index",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "题词百科",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#F8F8F8"
+	}
+}

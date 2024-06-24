@@ -6,15 +6,29 @@
             @change="changeTabbar"
             :fixed="true"
             :placeholder="false"
+            activeColor="#37AE69"
+            inactiveColor="#E9E9E9"
             :safeAreaInsetBottom="false"
         >
             <up-tabbar-item
                 v-for="(item, index) in list"
                 :key="index"
                 :text="item.text"
-                :icon="item.icon"
                 @click="clickTabbar(item, index)"
-            ></up-tabbar-item>
+            >
+                <template #active-icon>
+                    <image
+                        class="u-page__item__slot-icon"
+                        :src="item.imgFill"
+                    ></image>
+                </template>
+                <template #inactive-icon>
+                    <image
+                        class="u-page__item__slot-icon"
+                        :src="item.img"
+                    ></image>
+                </template>
+            </up-tabbar-item>
         </up-tabbar>
     </div>
 </template>
@@ -38,32 +52,29 @@
         icon: string;
         to: string;
         type?: string;
+        img?: string;
+        imgFill?: string;
     }
     const list: Tabbar[] = [
         {
             text: "首页",
             icon: "home",
+            img: "/static/bcq/01.png",
+            imgFill: "/static/bcq/01Fill.png",
             to: "/pages/home/home-index"
         },
         {
-            text: "社区",
+            text: "会员卡",
             icon: "photo",
+            img: "/static/bcq/02.png",
+            imgFill: "/static/bcq/02Fill.png",
             to: "/pages/community/community-index"
-        },
-        {
-            text: "发布",
-            icon: "plus",
-            to: "/pages/publish/publish-index",
-            type: "push"
-        },
-        {
-            text: "课程",
-            icon: "play-right",
-            to: "/pages/course/course-index"
         },
         {
             text: "我的",
             icon: "account",
+            img: "/static/bcq/03.png",
+            imgFill: "/static/bcq/03Fill.png",
             to: "/pages/my/my-index"
         }
     ];
@@ -88,5 +99,11 @@
     .tabbarBox {
         position: fixed;
         z-index: 500;
+        background: #ffffff;
+        box-shadow: 0px -5 5px 0px rgba(127, 127, 127, 0.09);
+        .u-page__item__slot-icon {
+            width: 20px;
+            height: 20px;
+        }
     }
 </style>

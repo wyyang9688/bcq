@@ -65,19 +65,6 @@
 				"navigationBarTitleText": "搜索"
 			}
 		},
-
-
-
-
-
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "默认页"
-			}
-		},
-
-
 	],
 	"tabBar": {
 		"color": "#FFFFFF",
@@ -91,17 +78,7 @@
 			}, {
 				"pagePath": "pages/community/community-index",
 				"text": "社区"
-			},
-			// {
-			// 	"pagePath": "pages/publish/publish-index",
-			// 	"text": "发布"
-			// }, 
-			{
-				"pagePath": "pages/course/course-index",
-				// "iconPath": "static/index.png",
-				// "selectedIconPath": "static/index-selected.png",
-				"text": "课程"
-			}, {
+			},{
 				"pagePath": "pages/my/my-index",
 				"text": "我的"
 			}

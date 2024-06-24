@@ -1,9 +1,6 @@
 <template>
     <view class="homePage tabbarPage">
-        <!-- <image class="logo" src="/static/logo.png" mode="'scaleToFill'" /> -->
-        <!-- <view class="text-area">
-            <text class="title" @click="counter.increment()">{{ title }}</text>
-        </view> -->
+       
         <div class="topTitle">AI提示词助手</div>
         <div class="swiperBox">
             <up-swiper
